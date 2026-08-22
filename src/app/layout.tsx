@@ -29,7 +29,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://anishyenduri.dev"),
+  metadataBase: new URL("https://personal-portfolio-neon-tau-16.vercel.app"),
   title: "Anish Yenduri — AI Product Engineer",
   description:
     "Anish Yenduri (Ani) — full-stack generalist who ships product and integrates ML systems. Rutgers CS, Honors College.",
