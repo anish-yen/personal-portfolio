@@ -8,7 +8,7 @@ export default function Hero() {
     >
       <div className="mx-auto w-full max-w-content">
         <p className="mb-5 animate-fade-up font-mono text-sm text-accent opacity-0 [animation-delay:0ms]">
-          Hi, I&apos;m {profile.nickname} — welcome to my corner of the internet.
+          Hi, I&apos;m {profile.nickname}.
         </p>
 
         <h1 className="mb-6 animate-fade-up font-display text-5xl font-medium leading-[1.05] tracking-tight text-foreground opacity-0 [animation-delay:100ms] sm:text-6xl md:text-7xl">
