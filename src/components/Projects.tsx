@@ -1,5 +1,6 @@
 import SectionHeading from "./SectionHeading";
 import { projects } from "@/lib/data";
+import type { Project } from "@/lib/data";
 
 export default function Projects() {
   const featured = projects.filter((p) => p.featured);
@@ -35,7 +36,7 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
-              <RepoLink href={p.href} />
+              <ProjectLinks p={p} />
             </div>
           ))}
         </div>
@@ -65,7 +66,7 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
-              <RepoLink href={p.href} />
+              <ProjectLinks p={p} />
             </div>
           ))}
         </div>
@@ -74,17 +75,31 @@ export default function Projects() {
   );
 }
 
-function RepoLink({ href }: { href?: string }) {
-  if (!href) return null;
+function ProjectLinks({ p }: { p: Project }) {
+  if (!p.href && !p.repo) return null;
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noreferrer noopener"
-      className="link-underline mt-5 inline-block text-sm text-accent"
-    >
-      View on GitHub &rarr;
-    </a>
+    <div className="mt-5 flex flex-wrap gap-4">
+      {p.href && (
+        <a
+          href={p.href}
+          target="_blank"
+          rel="noreferrer noopener"
+          className="link-underline inline-block text-sm text-accent"
+        >
+          {p.hrefLabel ?? "View on GitHub"} &rarr;
+        </a>
+      )}
+      {p.repo && (
+        <a
+          href={p.repo}
+          target="_blank"
+          rel="noreferrer noopener"
+          className="link-underline inline-block text-sm text-accent"
+        >
+          View on GitHub &rarr;
+        </a>
+      )}
+    </div>
   );
 }
 
