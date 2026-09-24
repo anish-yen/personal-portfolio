@@ -6,11 +6,10 @@ export const profile = {
   location: "New Brunswick, NJ",
 };
 
-// TODO: swap these placeholder hrefs for your real profiles.
 export const links = {
-  github: "https://github.com/your-username",
-  linkedin: "https://linkedin.com/in/your-username",
-  email: "you@example.com",
+  github: "https://github.com/anish-yen",
+  linkedin: "https://linkedin.com/in/anish-yenduri",
+  email: "yenduri.anish@gmail.com",
   resume: "/resume.pdf",
 };
 
@@ -23,24 +22,25 @@ export const education = {
 
 export const credentials = ["CompTIA Security+", "National Cyber Scholar"];
 
-// TODO: fill in real dates and 2-3 bullet points of concrete impact for each role.
 export const experience = [
   {
     company: "IBM",
     role: "Full-Stack Software Engineer Intern",
-    timeline: "TODO — add dates",
+    timeline: "May 2026 – Aug 2026",
     bullets: [
-      "TODO — add a concrete accomplishment (feature shipped, system built, metric moved).",
-      "TODO — add another accomplishment or the stack you worked in.",
+      "Built a cloud deployment service for 10+ products across 100 environments on IBM's MultiCloud SaaS platform, cutting onboarding time by 87%.",
+      "Engineered a thread-safe IAM caching service with proactive expiry refresh and request coalescing, cutting redundant auth calls by 80% and eliminating stale-token failures in pipelines.",
+      "Replaced a 6-step GitHub issue template with form-based automation over HMAC-authenticated GraphQL and Tekton CI/CD, validated across AWS, Azure, and IBM Cloud.",
     ],
   },
   {
     company: "Pacific Northwest National Laboratory (PNNL)",
     role: "Emerging Threats & Technologies Intern",
-    timeline: "TODO — add dates",
+    timeline: "Oct 2024 – Present",
     bullets: [
-      "TODO — add a concrete accomplishment (research finding, tool built, analysis delivered).",
-      "TODO — add another accomplishment or the stack you worked in.",
+      "Shipped 65+ tickets on the DOE C2M2 web platform in React, integrating with Node and Python services behind self-assessment workflows used by 2,400+ organizations.",
+      "Built a pdfmake report generator for self-evaluations, saving 20+ minutes of manual work per report.",
+      "Authored the Sol-ReMM Primary User Guide, documenting 350+ practices across 12 domains.",
     ],
   },
 ];
@@ -49,39 +49,58 @@ export const hackathons = [
   {
     event: "HackPrinceton 2026",
     project: "Aletheia",
-    note: "KnotAPI track recognition",
+    note: "Won the KnotAPI track",
   },
   {
-    event: "Morgan Stanley Hackathon",
-    project: "Lemontree",
-    note: undefined,
+    event: "Morgan Stanley Code to Give",
+    project: "LemonLens",
+    note: "Built for the Lemontree nonprofit",
   },
 ];
 
 export const projects = [
+  {
+    name: "Aletheia",
+    description:
+      "Won the KnotAPI track at HackPrinceton 2026. Aletheia uses SKU-level purchase data to match people with class-action settlements they qualify for, with an AI pipeline that runs from purchase ingestion to exposure analysis and automated filing.",
+    stack: ["Next.js", "TypeScript", "Python", "Supabase", "KnotAPI"],
+    status: "shipped" as const,
+    href: "https://github.com/haoranxu88/hackprinceton26",
+    featured: true,
+  },
+  {
+    name: "SubletMatching",
+    description:
+      "A sublet marketplace for Rutgers students. Sign-up is gated to verified Rutgers emails, with listings, favorites, and messaging on an Express API over Supabase, plus an Expo mobile app.",
+    stack: ["React", "Express", "Supabase", "Expo"],
+    status: "in-progress" as const,
+    href: "https://github.com/Trian27/SubletMatching",
+    featured: false,
+  },
+  {
+    name: "SentinelStream",
+    description:
+      "An intrusion-detection pipeline over 2.8M network flows: Optuna-tuned XGBoost at 0.866 test PR-AUC, SHAP explanations, drift monitoring, and FastAPI serving at 6.2 ms p95. 166 tests, 92% coverage.",
+    stack: ["PyTorch", "XGBoost", "SHAP", "MLflow", "FastAPI", "Docker"],
+    status: "shipped" as const,
+    href: "https://github.com/anish-yen/sentinelstream-ml",
+    featured: false,
+  },
+  {
+    name: "LemonLens",
+    description:
+      "A food access analytics platform for the Lemontree nonprofit, built at the Morgan Stanley Code to Give hackathon. I built the FastAPI backend and the issue classification pipeline behind its dashboard KPIs.",
+    stack: ["Python", "FastAPI", "Pydantic", "Gemini API"],
+    status: "shipped" as const,
+    href: "https://github.com/ishratarshad/trackb_team7_code_to_give",
+    featured: false,
+  },
   {
     name: "Song Recommendation Platform",
     description:
       "An ML-driven music retrieval and recommendation system — dense embeddings over a vector index power similarity search and personalized recommendations, served through a full-stack app.",
     stack: ["PyTorch", "FastAPI", "Next.js", "pgvector"],
     status: "in-progress" as const,
-    // TODO: add repo/demo links once available.
-    href: undefined,
-    featured: true,
-  },
-  {
-    name: "Project Two",
-    description: "TODO — add a one-to-two sentence description of this project.",
-    stack: ["TODO"],
-    status: "todo" as const,
-    href: undefined,
-    featured: false,
-  },
-  {
-    name: "Project Three",
-    description: "TODO — add a one-to-two sentence description of this project.",
-    stack: ["TODO"],
-    status: "todo" as const,
     href: undefined,
     featured: false,
   },
