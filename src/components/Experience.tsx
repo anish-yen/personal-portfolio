@@ -47,7 +47,7 @@ export default function Experience() {
             {hackathons.map((h) => (
               <div
                 key={h.event}
-                className="rounded-2xl border border-border bg-surface p-5"
+                className="rounded-2xl border border-border bg-surface shadow-sm p-5"
               >
                 <p className="font-medium text-foreground">{h.project}</p>
                 <p className="mt-1 text-sm text-muted">{h.event}</p>
