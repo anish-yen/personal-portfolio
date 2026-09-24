@@ -35,6 +35,7 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
+              <RepoLink href={p.href} />
             </div>
           ))}
         </div>
@@ -43,10 +44,10 @@ export default function Projects() {
           {rest.map((p) => (
             <div
               key={p.name}
-              className="rounded-2xl border border-dashed border-border p-6"
+              className="rounded-2xl border border-border bg-surface p-6"
             >
               <div className="mb-2 flex flex-wrap items-center gap-3">
-                <h3 className="font-display text-lg font-medium text-foreground/80">
+                <h3 className="font-display text-lg font-medium text-foreground">
                   {p.name}
                 </h3>
                 <StatusBadge status={p.status} />
@@ -54,6 +55,17 @@ export default function Projects() {
               <p className="text-sm leading-relaxed text-muted">
                 {p.description}
               </p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {p.stack.map((s) => (
+                  <span
+                    key={s}
+                    className="rounded-full border border-border px-3 py-1 font-mono text-xs text-muted"
+                  >
+                    {s}
+                  </span>
+                ))}
+              </div>
+              <RepoLink href={p.href} />
             </div>
           ))}
         </div>
@@ -62,7 +74,21 @@ export default function Projects() {
   );
 }
 
-function StatusBadge({ status }: { status: "in-progress" | "todo" }) {
+function RepoLink({ href }: { href?: string }) {
+  if (!href) return null;
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer noopener"
+      className="link-underline mt-5 inline-block text-sm text-accent"
+    >
+      View on GitHub &rarr;
+    </a>
+  );
+}
+
+function StatusBadge({ status }: { status: "in-progress" | "shipped" }) {
   if (status === "in-progress") {
     return (
       <span className="inline-flex items-center gap-1.5 rounded-full bg-accent/10 px-2.5 py-1 text-xs text-accent">
@@ -71,9 +97,5 @@ function StatusBadge({ status }: { status: "in-progress" | "todo" }) {
       </span>
     );
   }
-  return (
-    <span className="rounded-full bg-border/50 px-2.5 py-1 text-xs text-muted">
-      Add repo
-    </span>
-  );
+  return null;
 }
