@@ -7,7 +7,7 @@ export default function Contact() {
       <div className="mx-auto max-w-content">
         <SectionHeading index="05" title="Contact" />
 
-        <div className="rounded-2xl border border-border bg-surface px-6 py-14 text-center sm:px-14">
+        <div className="rounded-2xl border border-border bg-surface shadow-sm px-6 py-14 text-center sm:px-14">
           <h3 className="mx-auto max-w-lg text-balance font-serif text-3xl italic text-foreground sm:text-4xl">
             Let&apos;s build something together.
           </h3>
