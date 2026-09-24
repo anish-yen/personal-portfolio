@@ -25,7 +25,7 @@ export default function About() {
           </div>
 
           <div className="space-y-6 sm:col-span-2">
-            <div className="rounded-2xl border border-border bg-surface p-5">
+            <div className="rounded-2xl border border-border bg-surface shadow-sm p-5">
               <p className="mb-1 text-xs uppercase tracking-wider text-muted">
                 Education
               </p>
@@ -36,7 +36,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-border bg-surface p-5">
+            <div className="rounded-2xl border border-border bg-surface shadow-sm p-5">
               <p className="mb-2 text-xs uppercase tracking-wider text-muted">
                 Credentials
               </p>
