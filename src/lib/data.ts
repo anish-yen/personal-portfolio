@@ -1,6 +1,6 @@
 export const profile = {
   name: "Anish Yenduri",
-  nickname: "Ani",
+  nickname: "Anish",
   tagline: "Software Engineer",
   subtagline: "Product and AI engineering. CS at Rutgers, with SWE internships at IBM and PNNL.",
   location: "New Brunswick, NJ",
@@ -58,14 +58,27 @@ export const hackathons = [
   },
 ];
 
-export const projects = [
+export type Project = {
+  name: string;
+  description: string;
+  stack: string[];
+  status: "shipped" | "in-progress";
+  href?: string;
+  hrefLabel?: string;
+  repo?: string;
+  featured: boolean;
+};
+
+export const projects: Project[] = [
   {
     name: "Aletheia",
     description:
       "Won the KnotAPI track at HackPrinceton 2026. Aletheia uses SKU-level purchase data to match people with class-action settlements they qualify for, with an AI pipeline that runs from purchase ingestion to exposure analysis and automated filing.",
     stack: ["Next.js", "TypeScript", "Python", "Supabase", "KnotAPI"],
     status: "shipped" as const,
-    href: "https://github.com/haoranxu88/hackprinceton26",
+    href: "https://devpost.com/software/a-j4w2lc",
+    hrefLabel: "View on Devpost",
+    repo: "https://github.com/haoranxu88/hackprinceton26",
     featured: true,
   },
   {
@@ -102,6 +115,8 @@ export const projects = [
     stack: ["Next.js", "FastAPI", "Supabase", "Gemini API"],
     status: "shipped" as const,
     href: "https://ieee.rutgers.edu/divisions/mlai/projects",
+    hrefLabel: "View on Rutgers IEEE",
+    repo: "https://github.com/anish-yen/visibility-next",
     featured: false,
   },
   {
