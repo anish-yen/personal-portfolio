@@ -15,7 +15,7 @@ export default function Projects() {
           {featured.map((p) => (
             <div
               key={p.name}
-              className="rounded-2xl border border-border bg-surface p-6 sm:p-8"
+              className="rounded-2xl border border-border bg-surface shadow-sm p-6 sm:p-8"
             >
               <div className="mb-3 flex flex-wrap items-center gap-3">
                 <h3 className="font-display text-xl font-medium text-foreground">
@@ -45,7 +45,7 @@ export default function Projects() {
           {rest.map((p) => (
             <div
               key={p.name}
-              className="rounded-2xl border border-border bg-surface p-6"
+              className="rounded-2xl border border-border bg-surface shadow-sm p-6"
             >
               <div className="mb-2 flex flex-wrap items-center gap-3">
                 <h3 className="font-display text-lg font-medium text-foreground">
