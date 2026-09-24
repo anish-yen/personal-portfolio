@@ -30,18 +30,18 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://personal-portfolio-neon-tau-16.vercel.app"),
-  title: "Anish Yenduri — AI Product Engineer",
+  title: "Anish Yenduri — Software Engineer",
   description:
-    "Anish Yenduri (Ani) — full-stack generalist who ships product and integrates ML systems. Rutgers CS, Honors College.",
+    "Anish Yenduri. Product and AI engineering. CS at Rutgers, with SWE internships at IBM and PNNL.",
   openGraph: {
-    title: "Anish Yenduri — AI Product Engineer",
+    title: "Anish Yenduri — Software Engineer",
     description:
       "Full-stack generalist who ships product and integrates ML systems.",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "Anish Yenduri — AI Product Engineer",
+    title: "Anish Yenduri — Software Engineer",
     description:
       "Full-stack generalist who ships product and integrates ML systems.",
   },
