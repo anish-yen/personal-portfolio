@@ -1,8 +1,8 @@
 export const profile = {
   name: "Anish Yenduri",
   nickname: "Ani",
-  tagline: "AI Product Engineer",
-  subtagline: "Full-stack generalist who ships product and integrates ML systems.",
+  tagline: "Software Engineer",
+  subtagline: "Product and AI engineering. CS at Rutgers, with SWE internships at IBM and PNNL.",
   location: "New Brunswick, NJ",
 };
 
@@ -93,6 +93,15 @@ export const projects = [
     stack: ["Python", "FastAPI", "Pydantic", "Gemini API"],
     status: "shipped" as const,
     href: "https://github.com/ishratarshad/trackb_team7_code_to_give",
+    featured: false,
+  },
+  {
+    name: "AI Visibility Auditor",
+    description:
+      "Built with Rutgers IEEE's ML/AI division. Crawls a company site and competitor sites, generates buyer-style prompts, and simulates AI-answer visibility to produce a directional visibility score, with prioritized recommendations and on-demand content briefs.",
+    stack: ["Next.js", "FastAPI", "Supabase", "Gemini API"],
+    status: "shipped" as const,
+    href: "https://ieee.rutgers.edu/divisions/mlai/projects",
     featured: false,
   },
   {
