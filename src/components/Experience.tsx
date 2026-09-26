@@ -34,6 +34,18 @@ export default function Experience() {
                     </li>
                   ))}
                 </ul>
+                {job.link && (
+                  <div className="mt-3">
+                    <a
+                      href={job.link.href}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="link-underline inline-block text-sm text-accent"
+                    >
+                      {job.link.label} &rarr;
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           ))}
@@ -60,6 +72,7 @@ export default function Experience() {
             ))}
           </div>
         </div>
+
       </div>
     </section>
   );
