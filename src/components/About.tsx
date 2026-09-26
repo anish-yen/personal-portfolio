@@ -34,6 +34,15 @@ export default function About() {
               <p className="mt-2 text-sm text-muted">
                 {education.timeline} · {education.honor}
               </p>
+              <p className="mt-1 text-sm text-muted">{education.gpa}</p>
+              <p className="mt-2 text-xs text-muted">
+                <span className="text-foreground/70">Coursework:</span>{" "}
+                {education.coursework}
+              </p>
+              <p className="mt-1 text-xs text-muted">
+                <span className="text-foreground/70">Activities:</span>{" "}
+                {education.activities}
+              </p>
             </div>
 
             <div className="rounded-2xl border border-border bg-surface shadow-sm p-5">
