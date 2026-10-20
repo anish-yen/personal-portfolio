@@ -11,7 +11,7 @@ export default function About() {
           <div className="sm:col-span-3">
             <p className="text-balance text-lg leading-relaxed text-foreground/90">
               I&apos;m {profile.nickname}, a computer science student who likes
-              building things end to end — from a Postgres schema to a
+              building things end to end, from a Postgres schema to a
               production UI to the model in between. I gravitate toward
               product work that has real users, and I enjoy the parts of ML
               engineering that make a system actually usable: retrieval,
