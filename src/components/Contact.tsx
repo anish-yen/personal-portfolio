@@ -12,7 +12,7 @@ export default function Contact() {
             Let&apos;s build something together.
           </h3>
           <p className="mx-auto mt-4 max-w-md text-balance text-muted">
-            I&apos;m looking for SWE internships — reach out if you&apos;d like
+            I&apos;m looking for SWE internships. Reach out if you&apos;d like
             to chat.
           </p>
 
