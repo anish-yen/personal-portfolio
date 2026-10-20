@@ -47,7 +47,7 @@ export const experience: ExperienceEntry[] = [
   {
     company: "IBM",
     role: "Full-Stack Software Engineer Intern",
-    timeline: "May 2026 – Aug 2026",
+    timeline: "May 2026 to Aug 2026",
     bullets: [
       "Architected a cloud deployment service for 10+ products across 100 environments on IBM's MultiCloud SaaS platform, reducing onboarding time by 87%.",
       "Engineered a thread-safe IAM caching service with proactive expiry refresh and request coalescing, cutting redundant auth calls by 80% and eliminating stale-token failures in pipelines; validated with 15+ unit tests.",
@@ -59,7 +59,7 @@ export const experience: ExperienceEntry[] = [
   {
     company: "Pacific Northwest National Laboratory (PNNL)",
     role: "Software Engineering Intern, Emerging Threats & Technologies",
-    timeline: "Oct 2024 – Present",
+    timeline: "Oct 2024 to Present",
     bullets: [
       "Shipped 65+ Jira tickets across the DOE C2M2 web platform, implementing UI updates in React/JavaScript and integrating with Node and Python services behind self-assessment workflows used by 2,400+ organizations.",
       "Built a pdfmake report generator for self-evaluations, saving 20+ minutes of manual work per report.",
@@ -182,7 +182,7 @@ export const projects: Project[] = [
   {
     name: "Song Recommendation Platform",
     description:
-      "An ML-driven music retrieval and recommendation system — dense embeddings over a vector index power similarity search and personalized recommendations, served through a full-stack app.",
+      "An ML-driven music retrieval and recommendation system. Dense embeddings over a vector index power similarity search and personalized recommendations, served through a full-stack app.",
     stack: ["PyTorch", "FastAPI", "Next.js", "pgvector"],
     status: "in-progress" as const,
     href: undefined,
