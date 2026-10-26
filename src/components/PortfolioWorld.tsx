@@ -101,10 +101,10 @@ export default function PortfolioWorld() {
     const camTargets = [
       {x:0, y:0, z:7.4}, {x:0, y:0, z:8}, {x:0, y:0, z:8.4}, {x:0, y:0, z:8}, {x:0, y:0, z:7.4}
     ];
-    const groupOffsets = [{x:2.5,y:0},{x:-1.2,y:0},{x:0.6,y:0},{x:-0.7,y:0.1},{x:0,y:0}];
+    const groupOffsets = [{x:3.15,y:0},{x:-1.2,y:0},{x:0.6,y:0},{x:-0.7,y:0.1},{x:0,y:0}];
     function layout3D(){
       if(mobile()){ g0.position.set(0.3,-1.6,-1.2); g0.scale.setScalar(0.75); }
-      else { g0.position.set(groupOffsets[0].x, groupOffsets[0].y, 0); g0.scale.setScalar(1); }
+      else { g0.position.set(groupOffsets[0].x, groupOffsets[0].y, 0); g0.scale.setScalar(0.82); }
       for(let i=1;i<groups.length;i++) groups[i].position.set(groupOffsets[i].x, groupOffsets[i].y, 0);
     }
 
