@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Newsreader, JetBrains_Mono } from "next/font/google";
+import { Inter, Newsreader, JetBrains_Mono, Fraunces } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -15,6 +15,12 @@ const newsreader = Newsreader({
   display: "swap",
 });
 
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-fraunces",
+  display: "swap",
+});
+
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-jetbrains-mono",
@@ -25,18 +31,18 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://personal-portfolio-neon-tau-16.vercel.app"),
   title: "Anish Yenduri | Software Engineer",
   description:
-    "Anish Yenduri. Product and AI engineering. CS at Rutgers, with SWE internships at IBM and PNNL.",
+    "Anish Yenduri. Infrastructure, backend, and cloud engineering. CS at Rutgers, with SWE internships at IBM and PNNL.",
   openGraph: {
     title: "Anish Yenduri | Software Engineer",
     description:
-      "Full-stack generalist who ships product and integrates ML systems.",
+      "Infrastructure, backend, and cloud engineering. CS at Rutgers, with SWE internships at IBM and PNNL.",
     type: "website",
   },
   twitter: {
     card: "summary",
     title: "Anish Yenduri | Software Engineer",
     description:
-      "Full-stack generalist who ships product and integrates ML systems.",
+      "Infrastructure, backend, and cloud engineering. CS at Rutgers, with SWE internships at IBM and PNNL.",
   },
 };
 
@@ -48,7 +54,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${newsreader.variable} ${jetbrainsMono.variable} font-sans antialiased`}
+        className={`${inter.variable} ${newsreader.variable} ${jetbrainsMono.variable} ${fraunces.variable} font-sans antialiased`}
       >
         {children}
       </body>
