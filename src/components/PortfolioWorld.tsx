@@ -44,12 +44,12 @@ export default function PortfolioWorld() {
       new THREE.PointsMaterial({color:accent, size:0.035, transparent:true, opacity:0.55}));
     g0.add(stars); remember(g0); scene.add(g0);
 
-    /* ---- chapter 1: project constellation (7 nodes) ---- */
+    /* ---- chapter 1: project constellation (11 nodes) ---- */
     const g1 = track(new THREE.Group(), 1);
     const nodes = [];
     const ringR = 2.5;
-    for(let i=0;i<7;i++){
-      const a = (i/7)*Math.PI*2;
+    for(let i=0;i<11;i++){
+      const a = (i/11)*Math.PI*2;
       const feat = i===0;
       const m = new THREE.Mesh(new THREE.OctahedronGeometry(feat?0.42:0.3, 0),
         new THREE.MeshBasicMaterial({color: feat?accent:ink, wireframe:true, transparent:true, opacity: feat?0.9:0.4}));
@@ -59,7 +59,7 @@ export default function PortfolioWorld() {
       nodes.push(m); g1.add(m);
     }
     const linePts = [];
-    for(let i=0;i<7;i++){ linePts.push(nodes[i].position, nodes[(i+1)%7].position); }
+    for(let i=0;i<11;i++){ linePts.push(nodes[i].position, nodes[(i+1)%11].position); }
     const links = new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints(linePts),
       new THREE.LineBasicMaterial({color:accent, transparent:true, opacity:0.25}));
     g1.add(links); remember(g1); scene.add(g1);
@@ -492,6 +492,34 @@ export default function PortfolioWorld() {
             <div className="stack"><span>Python</span><span>SQLite</span><span>scikit-learn</span><span>Pandas</span></div>
             <div className="plinks"><a href="https://github.com/anish-yen/nba-win-prediction-project" target="_blank" rel="noreferrer">Code</a></div>
           </div>
+          <div className="proj" data-node="7">
+            <div className="tag">Shipped</div>
+            <h3>K-Color Analysis</h3>
+            <p>A Korean personal color analysis app, built with a small team: determines a user&apos;s color palette from facial features, skin tone, eye color, and hair, then recommends jewelry, clothing styles, and stores that match the palette.</p>
+            <div className="stack"><span>TypeScript</span></div>
+            <div className="plinks"><a href="https://github.com/tanish-banota/K-ColorAnalysis" target="_blank" rel="noreferrer">Code</a></div>
+          </div>
+          <div className="proj" data-node="8">
+            <div className="tag">In progress</div>
+            <h3>Song Recommendation Platform</h3>
+            <p>An ML-driven music retrieval and recommendation system. Dense embeddings over a vector index power similarity search and personalized recommendations, served through a full-stack app.</p>
+            <div className="stack"><span>PyTorch</span><span>FastAPI</span><span>Next.js</span><span>pgvector</span></div>
+            <div className="plinks"><a href="https://github.com/anish-yen/song-recommender" target="_blank" rel="noreferrer">Code</a></div>
+          </div>
+          <div className="proj" data-node="9">
+            <div className="tag">In progress</div>
+            <h3>Sweat</h3>
+            <p>Campus-first workout coordination: post a session, see friends on a live map, and ping them to join. An Expo React Native prototype, store-prepped with icon, splash, and build config.</p>
+            <div className="stack"><span>Expo</span><span>React Native</span><span>TypeScript</span></div>
+            <div className="plinks"><a href="https://github.com/anish-yen/sweat-campus" target="_blank" rel="noreferrer">Code</a></div>
+          </div>
+          <div className="proj" data-node="10">
+            <div className="tag">In progress</div>
+            <h3>Barber Reactivation</h3>
+            <p>A booking and client-reactivation app for independent barbershops, built around lapsed-client and no-show win-back so shops recover bookings they already earned once.</p>
+            <div className="stack"><span>Next.js</span><span>TypeScript</span><span>Supabase</span></div>
+            <div className="plinks"><a href="https://github.com/anish-yen/barber-app" target="_blank" rel="noreferrer">Code</a></div>
+          </div>
         </div>
       </div>
     </div>
@@ -603,4 +631,4 @@ export default function PortfolioWorld() {
 </footer>
     </>
   );
-            }
+}
