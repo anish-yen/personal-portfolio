@@ -36,3 +36,14 @@ test('hero links directly to the new section', () => {
 test('responsive layout uses one column on mobile', () => {
   assert.match(css, /@media\(max-width:760px\).*\.oss-grid\{grid-template-columns:1fr\}/);
 });
+
+test('navigation includes Open Source between Projects and Experience', () => {
+  const nav = source.split('<div className="tabs"')[1]?.split('</div>')[0];
+  assert.match(nav, /href="#work"[^>]*>Projects<\/a>\s*<a className="tab" href="#open-source">Open Source<\/a>\s*<a className="tab" href="#xp"/);
+});
+test('navigation tracking is independent of the six animation chapters', () => {
+  assert.match(source, /navSections = tabs.map/);
+  assert.match(source, /active = idx;/);
+  assert.match(source, /tab.classList.toggle\('active', i===selected\)/);
+  assert.match(css, /\.tab\{flex-shrink:0;white-space:nowrap;/);
+});
