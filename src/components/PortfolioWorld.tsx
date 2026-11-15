@@ -230,6 +230,7 @@ export default function PortfolioWorld() {
     /* ---- chapter tracking ---- */
     const chapters = [...document.querySelectorAll('.chapter')];
     const tabs = [...document.querySelectorAll('.tab')];
+    const navSections = tabs.map(tab => document.querySelector(tab.getAttribute('href')));
     let active = 0;
     function currentChapter(){
       const y = window.scrollY + window.innerHeight*0.42;
@@ -239,7 +240,11 @@ export default function PortfolioWorld() {
     }
     const onScroll = ()=>{
       const idx = currentChapter();
-      if(idx !== active){ active = idx; tabs.forEach((t,i)=>t.classList.toggle('active', i===idx)); }
+      active = idx;
+      const y = window.scrollY + window.innerHeight*0.42;
+      let selected = 0;
+      navSections.forEach((section, i)=>{ if(section && section.offsetTop <= y) selected = i; });
+      tabs.forEach((tab, i)=>tab.classList.toggle('active', i===selected));
     };
     window.addEventListener('scroll', onScroll, {passive:true});
 
@@ -410,6 +415,7 @@ export default function PortfolioWorld() {
     <div className="tabs" role="tablist">
       <a className="tab active" href="#hero" data-chapter="0">Overview</a>
       <a className="tab" href="#work" data-chapter="1">Projects</a>
+      <a className="tab" href="#open-source">Open Source</a>
       <a className="tab" href="#xp" data-chapter="2">Experience</a>
       <a className="tab" href="#cred" data-chapter="3">Credentials</a>
       <a className="tab" href="#contact" data-chapter="4">Contact</a>
@@ -654,4 +660,4 @@ export default function PortfolioWorld() {
 </footer>
     </>
   );
-}
+        }
