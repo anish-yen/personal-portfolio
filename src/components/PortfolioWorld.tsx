@@ -432,6 +432,7 @@ export default function PortfolioWorld() {
       <p>CS at Rutgers, with SWE internships at IBM and PNNL. I like building the backend and cloud systems behind products: deployment services, caching layers, and the pipelines that tie them together.</p>
       <div className="cta">
         <a className="btn primary" href="#work">See projects</a>
+        <a className="btn ghost" href="#open-source">Open source</a>
         <a className="btn ghost" href="https://github.com/anish-yen">GitHub</a>
         <a className="btn ghost" href="mailto:yenduri.anish@gmail.com">Email</a>
         <a className="btn ghost" href="/resume.pdf" target="_blank" rel="noreferrer">Resume</a>
@@ -521,6 +522,28 @@ export default function PortfolioWorld() {
             <div className="plinks"><a href="https://github.com/anish-yen/barber-app" target="_blank" rel="noreferrer">Code</a></div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="open-source" className="oss-section" aria-labelledby="oss-heading">
+    <div className="wrap">
+      <div className="eyebrow">Merged contributions</div>
+      <h2 id="oss-heading" className="section-title">Open Source Contributions</h2>
+      <p className="section-sub">Backend fixes accepted into RQ and Pika, with regression coverage and maintainer review.</p>
+      <div className="oss-grid">
+        <article className="oss-card">
+          <div className="oss-meta">Python / Redis <span>Merged</span></div>
+          <h3>RQ</h3>
+          <p>Fixed worker startup crashes when Redis CLIENT INFO replies could not be parsed, using a CLIENT LIST fallback with regression coverage.</p>
+          <a className="xlink" href="https://github.com/rq/rq/pull/2582" target="_blank" rel="noreferrer">View merged pull request #2582 <span aria-hidden="true">↗</span></a>
+        </article>
+        <article className="oss-card">
+          <div className="oss-meta">Python / RabbitMQ <span>Merged</span></div>
+          <h3>Pika</h3>
+          <p>Fixed a connection initialization race that could strip TLS settings from shared parameters, with regression coverage.</p>
+          <a className="xlink" href="https://github.com/pika/pika/pull/1844" target="_blank" rel="noreferrer">View merged pull request #1844 <span aria-hidden="true">↗</span></a>
+        </article>
       </div>
     </div>
   </section>

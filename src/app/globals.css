@@ -195,3 +195,13 @@ body {
   .studio{justify-content:flex-end;padding-bottom:110px}
   .studio .wrap{background:rgba(246,241,231,.85);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:20px;padding:24px 22px}
 }
+
+  /* Open source contributions: separate from chapter indexes used by the 3D scene. */
+  .oss-section{position:relative;padding:100px 28px;scroll-margin-top:105px}
+  .oss-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+  .oss-card{background:rgba(251,248,241,.95);border:1px solid var(--line);border-radius:18px;padding:28px}
+  .oss-meta{font-size:12px;color:var(--muted);display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+  .oss-meta span{border:1px solid #78927a;color:#365a3b;background:#eaf0e6;border-radius:999px;padding:3px 10px;font-weight:600}
+  .oss-card h3{font-size:30px;margin-bottom:12px}
+  .oss-card p{font-size:15px;color:#4a4237;margin-bottom:22px}
+  @media(max-width:760px){.oss-section{padding:70px 20px;scroll-margin-top:145px}.oss-grid{grid-template-columns:1fr}.oss-card{padding:24px}}
